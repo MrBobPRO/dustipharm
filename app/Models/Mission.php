@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Mission extends Model
 {
   public $timestamps = false;
+  protected $guarded = ['id'];
 
   use HasFactory;
 }

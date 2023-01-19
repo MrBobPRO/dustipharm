@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('working_days');
             $table->string('phone');
             $table->string('email');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

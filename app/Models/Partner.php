@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Partner extends Model
 {
   public $timestamps = false;
+  protected $fillable = ['title', 'body', 'link'];
 
   use HasFactory;
 }

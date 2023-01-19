@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Advantage extends Model
 {
-    use HasFactory;
+  public $timestamps = false;
+  protected $fillable = ['title', 'body'];
+
+  use HasFactory;
 }
