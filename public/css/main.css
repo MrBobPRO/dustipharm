@@ -1,0 +1,260 @@
+body {
+  position: relative;
+  /* PUSH FOOTER TO THE BOTTOM */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+:root {
+  --main-color: #1BA1A0;
+  --secondary-color: #FF803A;
+  --text-color: #4D4D4D;
+  --bg-color: #F5F5F5;
+  --main-gradient: linear-gradient(135deg, #1CA9A8 0%, #1A9998 100%), #1BA1A0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 1em;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+b,
+strong,
+p b,
+p strong {
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: flex;
+}
+
+picture {
+  display: flex;
+}
+
+.unselectable {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.visually-hidden {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.main-container {
+  max-width: 1232px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.main-title {
+  font-weight: 600;
+  font-size: 24px;
+  color: #333333;
+}
+
+/* ------------ Buttons ------------ */
+.button {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.button span {
+  font-size: 20px;
+}
+
+.button--main {
+  background: var(--main-gradient);
+  color: white;
+  padding: 10px 64px;
+  transition: 0.3s;
+}
+
+.button--main:hover {
+  box-shadow: -2px 2px 4px rgba(22, 129, 128, 0.2), 2px -2px 4px rgba(22, 129, 128, 0.2), -2px -2px 4px rgba(32, 193, 192, 0.9), 2px 2px 5px rgba(22, 129, 128, 0.9), 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16), inset 1px 1px 2px rgba(32, 193, 192, 0.3), inset -1px -1px 2px rgba(22, 129, 128, 0.5);
+}
+
+/* ------------ /end Buttons------------ */
+
+
+/* ------------ Logo ------------ */
+.logo {
+  display: flex;
+}
+
+.logo__image {
+  width: 136px;
+}
+
+/* ------------ /end Logo ------------ */
+
+
+/* ------------ Header ------------ */
+.header {
+  box-shadow: 0px 2px 8px rgb(40 41 61 / 8%), 0px 20px 32px rgb(96 97 112 / 24%);
+}
+
+.header__inner {
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.navbar__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 32px;
+  list-style: none;
+}
+
+.header__phones {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.header__phone-icon {
+  padding: 8px;
+  background: var(--main-gradient);
+  box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
+  color: white;
+  display: flex;
+  border-radius: 50%;
+}
+
+.header__phones-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__phone-item {
+  line-height: 1.4;
+}
+
+/* ------------ /end Header ------------ */
+
+
+/* ------------ Home ------------ */
+/* Banner */
+.banner {
+  background: url('/img/main/pattern.png'), url('/img/home/banner.png');
+  background-size: auto, cover;
+  background-position: top right, center left;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.banner__inner {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  color: white;
+  justify-content: flex-end;
+}
+
+.banner__txt {
+  max-width: 480px;
+}
+
+.banner__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 68px;
+  margin-bottom: 16px;
+}
+
+.banner__body {
+  margin-bottom: 32px;
+}
+
+/* About */
+.home-about__inner {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  flex-direction: column;
+  position: relative;
+}
+
+.home-about__title {
+  margin-bottom: 16px;
+}
+
+.home-about__desc {
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+
+.home-about__foot {
+  background-color: var(--bg-color);
+  border-radius: 16px;
+  padding: 32px 40px;
+  transition: 0.3s;
+}
+
+.home-about__inner:hover .home-about__foot {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.home-about__foot-desc {
+  margin-bottom: 32px;
+}
+
+.home-about__foot-image {
+  position: absolute;
+  right: 60px;
+  bottom: 88px;
+  width: 500px;
+  transition: 0.3s;
+}
+
+.home-about__inner:hover .home-about__foot-image {
+  filter: drop-shadow(0px 2px 8px rgba(40, 41, 61, 0.08)) drop-shadow(0px 20px 32px rgba(96, 97, 112, 0.24)) drop-shadow(0px 2px 8px rgba(40, 41, 61, 0.08)) drop-shadow(0px 20px 32px rgba(96, 97, 112, 0.24));
+}
+/* ------------ /end Home ------------ */
