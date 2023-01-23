@@ -64,7 +64,7 @@ class ServiceSeeder extends Seeder
     }
 
     Service::get()->each(function ($item) {
-      $item->image = strtolower(transliterateIntoLatin($item->title)) . '.png';
+      $item->image = str_replace('/', '', strip_tags(strtolower(transliterateIntoLatin($item->title))) . '.png');
       $item->save();
     });
   }

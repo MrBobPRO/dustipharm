@@ -33,6 +33,9 @@
   {{-- JQuery --}}
   <script src="{{ asset('plugins/jquery-3.6.0.min.js') }}"></script>
 
+  {{-- Yandex Map --}}
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=33a7de30-2310-4469-8b08-d11b5c952eca&lang=ru_RU"></script>
+
   <script src="{{ asset('js/main.js') }}"></script>
 </body>
 

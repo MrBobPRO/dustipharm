@@ -14,12 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [MainController::class, 'home'])->name('home');
-Route::get('/about', [MainController::class, 'about'])->name('about.index');
-Route::get('/services', [MainController::class, 'services'])->name('services.index');
-Route::get('/partners', [MainController::class, 'partners'])->name('partners.index');
-Route::get('/drugstores', [MainController::class, 'drugstores'])->name('drugstores.index');
-Route::get('/express-pharm', [MainController::class, 'expressPharm'])->name('express-pharm.index');
-Route::get('/contacts', [MainController::class, 'contacts'])->name('contacts.index');
+Route::controller(MainController::class)->group(function () {
+  Route::get('/', 'home')->name('home');
+  Route::get('/about', 'about')->name('about.index');
+  Route::get('/services', 'services')->name('services.index');
+  Route::get('/partners', 'partners')->name('partners.index');
+  Route::get('/drugstores', 'drugstores')->name('drugstores.index');
+  Route::get('/express-pharm', 'expressPharm')->name('express-pharm.index');
+  Route::get('/contacts', 'contacts')->name('contacts.index');
+});
 
 require __DIR__.'/auth.php';

@@ -19,57 +19,47 @@ class DrugstoreSeeder extends Seeder
   {
     $items = [
       [
-        'title' => 'Нусратулло Махсум',
+        'title' => 'Аптека №1',
         'working_hours' => '08:00 - 20:00',
         'working_days' => 'понедельник - суббота',
         'phone' => '+992 918 00 00 00',
         'email' => 'nm@dustipharma.com',
-        'image' => 'test.png'
+        'image' => 'test.png',
+        'x_coordinates' => '38.5777887224577',
+        'y_coordinates' => '68.75266134557997'
       ],
 
       [
-        'title' => 'Нусратулло Махсум',
+        'title' => 'Аптека №2',
         'working_hours' => '08:00 - 20:00',
         'working_days' => 'понедельник - суббота',
         'phone' => '+992 918 00 00 00',
         'email' => 'nm@dustipharma.com',
-        'image' => 'test.png'
+        'image' => 'test.png',
+        'x_coordinates' => '38.5779900197525',
+        'y_coordinates' => '68.74977528901772'
       ],
 
       [
-        'title' => 'Нусратулло Махсум',
+        'title' => 'Аптека №3',
         'working_hours' => '08:00 - 20:00',
         'working_days' => 'понедельник - суббота',
         'phone' => '+992 918 00 00 00',
         'email' => 'nm@dustipharma.com',
-        'image' => 'test.png'
+        'image' => 'test.png',
+        'x_coordinates' => '38.57727708929384',
+        'y_coordinates' => '68.74359547986681'
       ],
 
       [
-        'title' => 'Нусратулло Махсум',
+        'title' => 'Аптека №4',
         'working_hours' => '08:00 - 20:00',
         'working_days' => 'понедельник - суббота',
         'phone' => '+992 918 00 00 00',
         'email' => 'nm@dustipharma.com',
-        'image' => 'test.png'
-      ],
-
-      [
-        'title' => 'Нусратулло Махсум',
-        'working_hours' => '08:00 - 20:00',
-        'working_days' => 'понедельник - суббота',
-        'phone' => '+992 918 00 00 00',
-        'email' => 'nm@dustipharma.com',
-        'image' => 'test.png'
-      ],
-
-      [
-        'title' => 'Нусратулло Махсум',
-        'working_hours' => '08:00 - 20:00',
-        'working_days' => 'понедельник - суббота',
-        'phone' => '+992 918 00 00 00',
-        'email' => 'nm@dustipharma.com',
-        'image' => 'test.png'
+        'image' => 'test.png',
+        'x_coordinates' => '38.58083328381009',
+        'y_coordinates' => '68.74920666053954'
       ],
     ];
 

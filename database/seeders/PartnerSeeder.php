@@ -56,12 +56,6 @@ class PartnerSeeder extends Seeder
 
       [
         'title' => 'Apharma',
-        'body' => 'Компания обладаем всем необходимым для создания благоприятных условий транспортировки',
-        'link' => 'https://evolet.tj'
-      ],
-
-      [
-        'title' => 'Мировой опыт',
         'body' => 'Экспортёр лекарственных препаратов.г',
         'link' => 'https://evolet.tj'
       ],

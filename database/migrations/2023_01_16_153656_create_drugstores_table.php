@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('phone');
             $table->string('email');
             $table->string('image')->nullable();
+            $table->string('x_coordinates');
+            $table->string('y_coordinates');
             $table->timestamps();
         });
     }

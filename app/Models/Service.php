@@ -11,4 +11,9 @@ class Service extends Model
   protected $fillable = ['title', 'body'];
 
   use HasFactory;
+
+  public function getAll()
+  {
+    return $this->all();
+  }
 }
