@@ -6,7 +6,6 @@ use App\Models\Drugstore;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-use function App\Support\transliterateIntoLatin;
 
 class DrugstoreSeeder extends Seeder
 {

@@ -6,7 +6,7 @@ use App\Models\Advantage;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-use function App\Support\transliterateIntoLatin;
+// use function App\Support\transliterateIntoLatin;
 
 class AdvantageSeeder extends Seeder
 {

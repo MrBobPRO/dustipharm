@@ -6,10 +6,7 @@
  * @author Bobur Nuridinov <bobnuridinov@gmail.com>
  */
 
-namespace App\Support;
-
 use Illuminate\Support\Str;
-use Image;
 
 /**
  * Transliterate string from any other language into latin

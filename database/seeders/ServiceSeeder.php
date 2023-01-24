@@ -6,8 +6,6 @@ use App\Models\Service;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-use function App\Support\transliterateIntoLatin;
-
 class ServiceSeeder extends Seeder
 {
   /**

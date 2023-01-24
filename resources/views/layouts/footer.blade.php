@@ -6,15 +6,15 @@
         <h4 class="footer__title">Полезные ссылки</h4>
         <ul class="footer__links-list">
           <li>
-            <a class="footer__links-item" href="#">Evolet</a>
+            <a class="footer__links-item" href="#">Evolet Tajikistan</a>
           </li>
 
           <li>
-            <a class="footer__links-item" href="#">Vegapharm</a>
+            <a class="footer__links-item" href="#">Vegapharm Tajikistan</a>
           </li>
 
           <li>
-            <a class="footer__links-item" href="#">Spey</a>
+            <a class="footer__links-item" href="#">Spey Tajikistan</a>
           </li>
 
           <li>

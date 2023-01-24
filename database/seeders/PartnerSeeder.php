@@ -6,8 +6,6 @@ use App\Models\Partner;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-use function App\Support\transliterateIntoLatin;
-
 class PartnerSeeder extends Seeder
 {
   /**
