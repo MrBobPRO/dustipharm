@@ -39,4 +39,31 @@
   </div>
 </section>
 
+<section class="registration">
+  <div class="registration__inner main-container">
+    <div class="registration__card">
+      <img class="registration__card-image" src="{{ asset('img/services/registration.png') }}" alt="registration">
+
+      <div class="registration__card-body">
+        <h2 class="registration__card-title main-title">Услуги по <br>регистрации</h2>
+        <p class="registration__card-desc">
+          ООО «Дусти Фарма» активно помогает своим партнерам в вопросах регистрации лекарств в Республике Таджикистан. <br><br>Специалисты ООО «Дусти Фарма» оказывают
+          квалифицированное содействие в подготовке необходимой документации для регистрации лекарственных средств, изделий медицинского назначения, парафармацевтической продукции,
+          в том числе средств гигиены. Благодаря этому оформление полного пакета документов и получение регистрационного сертификата на продукт осуществляется в кратчайшие сроки. У
+          нашей компании большой опыт в данной деятельности и широкий охват компаний.
+        </p>
+      </div>
+    </div>
+
+    <p class="registration__txt">
+      Если Вы заинтересованы в сотрудничестве с нами, свяжитесь с отделом продаж. Наш специалист по работе с клиентами ответит на все Ваши вопросы, и договорится о личной встрече
+      для заключения договора в удобное для Вас время.
+    </p>
+
+    <a class="registration__button button button--main" href="{{ route('services.index') }}">
+      Наши услуги <span class="material-icons">chevron_right</span>
+    </a>
+  </div>
+</section>
+
 @endsection

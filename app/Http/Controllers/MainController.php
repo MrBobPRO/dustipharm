@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Advantage;
 use App\Models\Drugstore;
 use App\Models\Mission;
 use App\Models\Partner;
 use App\Models\Service;
 use App\Models\Value;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 
 class MainController extends Controller
 {
@@ -34,5 +34,27 @@ class MainController extends Controller
     $services = Service::all();
 
     return view('pages.services', compact('services'));
+  }
+
+  public function partners()
+  {
+    $partners = Partner::all();
+
+    return view('pages.partners', compact('partners'));
+  }
+
+  public function drugstores()
+  {
+    $drugstores = Drugstore::all();
+    $drugstoresArray = Drugstore::all()->toArray();
+
+    return view('pages.drugstores', compact('drugstores', 'drugstoresArray'));
+  }
+
+  public function expressPharm()
+  {
+    $advantages = Advantage::all();
+
+    return view('pages.express', compact('advantages'));
   }
 }

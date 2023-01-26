@@ -8,7 +8,7 @@
       <h1 class="banner__title">Ваше здоровье <br>– наша обязанность</h1>
       <p class="banner__body">Ваше здоровье для нас самое важное, поэтому мы ежедневно работаем над улучшением всех звеньев нашей работы, начиная с поиска новых, более
         инновационных лекарственных средств, заканчивая вопросами логистики.</p>
-      <a class="button button--main banner__button" href="{{ route('services.index') }}">
+      <a class="banner__button button button--main" href="{{ route('services.index') }}">
         Наши услуги <span class="material-icons">chevron_right</span>
       </a>
     </div>
