@@ -57,4 +57,9 @@ class MainController extends Controller
 
     return view('pages.express', compact('advantages'));
   }
+
+  public function contacts()
+  {
+    return view('pages.contacts');
+  }
 }

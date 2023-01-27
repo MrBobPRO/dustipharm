@@ -1,6 +1,7 @@
 // initialize Yandex maps
 ymaps.ready(init);
 function init() {
+  // Drugstores map
   if (document.querySelector('#drugstores-map')) {
     let drugstoresMap = new ymaps.Map('drugstores-map', {
       center: [38.5779900197525, 68.75266134557997],
@@ -29,6 +30,33 @@ function init() {
 
       drugstoresMap.geoObjects.add(myPlacemark);
     });
+  }
+
+  // Main office map
+  if (document.querySelector('#main-office-map')) {
+    let mainOfficeMap = new ymaps.Map('main-office-map', {
+      center: [38.5779900197525, 68.75266134557997],
+      zoom: 16
+    });
+
+    let myPlacemark = new ymaps.GeoObject(
+      {
+        geometry: {
+          type: "Point",
+          coordinates: [38.5779900197525, 68.75266134557997],
+        },
+
+        // properties: {
+        //   iconContent: 'Головной офис'
+        // }
+      },
+
+      {
+        preset: 'islands#redDotIcon',
+      }
+    );
+
+    mainOfficeMap.geoObjects.add(myPlacemark);
   }
 }
 
