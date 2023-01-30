@@ -25,6 +25,8 @@
       средств, последовательно расширяя свою сеть оптовых и розничных аптек, а также распространяя лекарственные препараты через другие аптеки страны.
     </p>
 
+    <img class="home-about__foot-image" src="{{ asset('img/home/about.png') }}" alt="pharmacy">
+
     <div class="home-about__foot">
       <p class="home-about__foot-desc">
         Основной задачей нашей компании является решение <br>актуальных проблем медицины и здравоохранения <br>Таджикистана путем предоставление безопасных, эффективных<br> и
@@ -35,8 +37,6 @@
         Подробнее <span class="material-icons">chevron_right</span>
       </a>
     </div>
-
-    <img class="home-about__foot-image" src="{{ asset('img/home/about.png') }}" alt="pharmacy">
   </div>
 </section>
 {{-- About end --}}

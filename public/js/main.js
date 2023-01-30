@@ -64,3 +64,13 @@ function init() {
 document.querySelector('.scroll-top').addEventListener('click', function () {
   document.body.scrollIntoView({ block: 'start', behavior: 'smooth' });
 });
+
+
+// Mobile menu toggler
+let mobileMenu = document.querySelector('.mobile-menu');
+
+document.querySelectorAll('[data-action="toggle-menu"]').forEach((item) => {
+  item.addEventListener('click', function () {
+    mobileMenu.classList.toggle('mobile-menu--visible');
+  });
+});

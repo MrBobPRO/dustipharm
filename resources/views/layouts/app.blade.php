@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="{{ asset('plugins/normalize.css') }}">
 
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/media.css') }}">
 </head>
 
 <body>
