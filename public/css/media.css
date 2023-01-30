@@ -28,9 +28,28 @@
     padding: 36px 24px;
   }
 
-  .home-services__secondary-cards .secondary-card {
+  .secondary-card {
     width: 100%;
     padding: 32px 16px;
+  }
+
+  .secondary-card--image-bottomed {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .secondary-card--image-bottomed .secondary-card__title {
+    order: 2;
+    margin-top: 32px;
+  }
+
+  .secondary-card--image-bottomed .secondary-card__desc {
+    order: 3;
+    margin-bottom: 0;
+  }
+
+  .secondary-card--image-bottomed .secondary-card__image {
+    order: 1;
   }
 
   /* Header */
@@ -135,6 +154,10 @@
     flex-direction: column;
   }
 
+  .home-services__secondary-cards .secondary-card {
+    width: 100%;
+  }
+
   /* Home Partners */
   .home-partners__inner {
     padding-bottom: 32px;
@@ -150,5 +173,81 @@
     height: auto;
     width: 180px;
     min-width: 180px;
+  }
+
+  /* About page */
+  .page-base__inner {
+    padding: 24px 16px;
+  }
+
+  .page-base__image {
+    height: 210px;
+  }
+
+  .about-page__desc-inner {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    flex-direction: column;
+  }
+
+  .about-page__cards-inner {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .about-page__cards-left,
+  .about-page__cards-right {
+    gap: 0;
+    width: 100%;
+  }
+
+  .about-page__cards-left .secondary-card {
+    padding-top: 0;
+  }
+
+  .about-page__cards-left .secondary-card:first-child {
+    padding-top: 32px;
+  }
+
+  .about-page__cards-right .secondary-card {
+    padding-top: 0;
+  }
+
+  .about-page__cards-inner .secondary-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .mission__inner {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    flex-direction: column;
+  }
+
+  .mission__list {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .mission__list-item {
+    width: 100%;
+  }
+
+  .values__inner {
+    padding-bottom: 40px;
+  }
+
+  .values__list {
+    gap: 16px;
+  }
+
+  .values__list .secondary-card {
+    width: 100%;
+  }
+
+  .values__list .secondary-card__desc {
+    margin-bottom: 0;
   }
 }
