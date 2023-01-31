@@ -250,4 +250,147 @@
   .values__list .secondary-card__desc {
     margin-bottom: 0;
   }
+
+  /* Services Page */
+  .services-page__desc-inner {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+
+  .services__title br {
+    display: none;
+  }
+
+  .services {
+    padding-bottom: 40px;
+  }
+
+  .registration__inner {
+    padding: 0;
+  }
+
+  .registration__card {
+    flex-direction: column;
+    padding: 32px 16px;
+  }
+
+  .registration__txt {
+    margin: 32px 0;
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .registration__button {
+    margin: 0 16px 40px;
+    width: calc(100% - 32px);
+    justify-content: center;
+  }
+
+  /* Partners page */
+  .partners-page__desc-inner {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+
+  .partners__desc {
+    max-width: 100%;
+  }
+
+  .partners-list {
+    gap: 16px;
+  }
+
+  .partners-card {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .partners-card__image {
+    width: 100%;
+  }
+
+  .partners-card__link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Drugstores Page */
+  .drugstores-page__desc-inner {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+
+  .drugstores__inner {
+    padding-bottom: 40px;
+  }
+
+  .drugstores-list {
+    gap: 20px;
+  }
+
+  .drugstores-list .secondary-card__desc {
+    margin-bottom: 20px;
+  }
+
+  /* Express Page */
+  .express-page__desc-inner {
+    padding-top: 32px;
+    padding-bottom: 40px;
+    flex-direction: column;
+  }
+
+  .express-page__desc-txt:first-child,
+  .express-page__desc-txt:nth-child(2) {
+    width: 100%;
+  }
+
+  .about-express__inner {
+    padding-bottom: 40px;
+  }
+
+  .about-express__divider {
+    flex-direction: column;
+    padding: 32px 16px;
+  }
+
+  .about-express__image {
+    width: 100%;
+  }
+
+  .about-express__txt {
+    width: 100%;
+  }
+
+  .about-express__title br {
+    display: none;
+  }
+
+  .advantages__inner {
+    padding-bottom: 40px;
+  }
+
+  .advantages-contacts__inner {
+    padding-bottom: 40px;
+  }
+
+  .order-card {
+    flex-direction: column-reverse;
+    padding: 32px 16px;
+    gap: 32px;
+  }
+
+  .order-card__txt {
+    width: 100%;
+  }
+
+  /* Contacts Page */
+  .main-office__inner {
+    padding: 32px 16px 0;
+  }
+
+  .main-office-map-container {
+    margin: 0 -16px;
+    border-radius: 0;
+    padding: 0;
+  }
 }

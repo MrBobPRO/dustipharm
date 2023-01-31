@@ -60,8 +60,8 @@
       для заключения договора в удобное для Вас время.
     </p>
 
-    <a class="registration__button button button--main" href="{{ route('services.index') }}">
-      Наши услуги <span class="material-icons">chevron_right</span>
+    <a class="registration__button button button--main" href="{{ route('contacts.index') }}">
+      Связаться с нами <span class="material-icons">chevron_right</span>
     </a>
   </div>
 </section>
