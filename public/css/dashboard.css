@@ -531,6 +531,10 @@ img {
   border-radius: var(--theme-border-radius);
 }
 
+.form-image--dark-bg {
+  background-color: black;
+}
+
 .form-actions {
   display: flex;
   gap: 20px;

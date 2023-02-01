@@ -50,7 +50,7 @@
   <script src="{{ asset('plugins/jquery-3.6.0.min.js') }}"></script>
 
   {{-- Boostrap 5.3 --}}
-  <script src="{{ asset('plugins/bootstrap/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('plugins/bootstrap/bootstrap.bundle.min.js') }}"></script>
 
   {{-- Selectize 0.13.3 --}}
   <script src="{{ asset('plugins/selectize/selectize.min.js') }}"></script>

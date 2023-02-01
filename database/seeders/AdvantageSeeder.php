@@ -64,7 +64,7 @@ class AdvantageSeeder extends Seeder
     }
 
     Advantage::get()->each(function ($item) {
-      $item->image = strip_tags(strtolower(transliterateIntoLatin($item->title))) . '.png';
+      $item->image = transliterateIntoLatin($item->title) . '.png';
       $item->save();
     });
   }

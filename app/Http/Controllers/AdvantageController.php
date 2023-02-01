@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Advantage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class AdvantageController extends Controller
 {
+  const IMAGE_PATH = 'img/advantages';
+
   /**
    * Display a listing of the resource.
    *
@@ -39,7 +42,7 @@ class AdvantageController extends Controller
    */
   public function create()
   {
-    //
+    return view('dashboard.advantages.create');
   }
 
   /**
@@ -50,18 +53,17 @@ class AdvantageController extends Controller
    */
   public function store(Request $request)
   {
-    //
-  }
+    $item = new Advantage();
+    $fields = ['body'];
+    fillModelColumns($item, $fields, $request);
+    $item->title = customNl2br($request->title);
 
-  /**
-   * Display the specified resource.
-   *
-   * @param  \App\Models\Advantage  $advantage
-   * @return \Illuminate\Http\Response
-   */
-  public function show(Advantage $advantage)
-  {
-    //
+    // upload files
+    uploadModelsFile($request, $item, 'image', transliterateIntoLatin($item->title), self::IMAGE_PATH, 44);
+
+    $item->save();
+
+    return redirect()->route('advantages.dashboard.index');
   }
 
   /**
@@ -70,9 +72,11 @@ class AdvantageController extends Controller
    * @param  \App\Models\Advantage  $advantage
    * @return \Illuminate\Http\Response
    */
-  public function edit(Advantage $advantage)
+  public function edit(Request $request)
   {
-    //
+    $item = Advantage::find($request->id);
+
+    return view('dashboard.advantages.edit', compact('item'));
   }
 
   /**
@@ -82,9 +86,19 @@ class AdvantageController extends Controller
    * @param  \App\Models\Advantage  $advantage
    * @return \Illuminate\Http\Response
    */
-  public function update(Request $request, Advantage $advantage)
+  public function update(Request $request)
   {
-    //
+    $item = Advantage::find($request->id);
+    $fields = ['body'];
+    fillModelColumns($item, $fields, $request);
+    $item->title = customNl2br($request->title);
+    $item->save();
+
+    // upload files
+    uploadModelsFile($request, $item, 'image', transliterateIntoLatin($item->title), self::IMAGE_PATH, 44);
+    $item->save();
+
+    return redirect()->route('advantages.dashboard.index');
   }
 
   /**

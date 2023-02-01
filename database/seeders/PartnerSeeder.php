@@ -64,7 +64,7 @@ class PartnerSeeder extends Seeder
     }
 
     Partner::get()->each(function ($item) {
-      $item->image = strtolower(transliterateIntoLatin($item->title)) . '.png';
+      $item->image = transliterateIntoLatin($item->title) . '.png';
       $item->save();
     });
   }

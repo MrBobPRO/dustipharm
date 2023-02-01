@@ -15,6 +15,7 @@ use App\Models\Value;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Route;
 
+
 /**
  * Transliterate string from any other language into latin
  *
@@ -25,25 +26,27 @@ function transliterateIntoLatin($string): string
   $search = [
     'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п',
     'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я',
-    'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П',
-    'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я',
-    'ӣ', 'ӯ', 'ҳ', 'қ', 'ҷ', 'ғ', 'Ғ', 'Ӣ', 'Ӯ', 'Ҳ', 'Қ', 'Ҷ',
+    'ӣ', 'ӯ', 'ҳ', 'қ', 'ҷ', 'ғ',
     ' ', '_'
   ];
 
   $replace = [
     'a', 'b', 'v', 'g', 'd', 'e', 'io', 'zh', 'z', 'i', 'y', 'k', 'l', 'm', 'n', 'o', 'p',
     'r', 's', 't', 'u', 'f', 'h', 'ts', 'ch', 'sh', 'shb', 'a', 'i', 'y', 'e', 'yu', 'ya',
-    'a', 'b', 'v', 'g', 'd', 'e', 'io', 'zh', 'z', 'i', 'y', 'k', 'l', 'm', 'n', 'o', 'p',
-    'r', 's', 't', 'u', 'f', 'h', 'ts', 'ch', 'sh', 'shb', 'a', 'i', 'y', 'e', 'yu', 'ya',
-    'i', 'u', 'h', 'q', 'j', 'g', 'g', 'i', 'u', 'h', 'q', 'j',
+    'i', 'u', 'h', 'q', 'j', 'g',
     '-', '-'
   ];
+
+  // remove tags and lowercase it
+  $string = strip_tags($string);
+
+  // lowercase
+  $string = mb_strtolower($string);
 
   // manual transilation
   $transilation = str_replace($search, $replace, $string);
 
-  // Additional Laravel transilation of unsupported characters
+  // additional Laravel transilation of unsupported characters
   $transilation = Str::ascii($transilation);
 
   return $transilation;
@@ -60,19 +63,16 @@ function transliterateIntoLatin($string): string
 function generateUniqueSlug($model, $string, $ignoreId = null)
 {
   // transliterate into latin
-  $transilation = transliterateIntoLatin($string);
+  $slug = transliterateIntoLatin($string);
 
   // remove unwanted characters
-  $transilation = preg_replace('~[^-\w]+~', '', $transilation);
+  $slug = preg_replace('~[^-\w]+~', '', $slug);
 
-  // remove duplicate divider
-  $transilation = preg_replace('~-+~', '-', $transilation);
+  // remove repeating dividers
+  $slug = preg_replace('~-+~', '-', $slug);
 
-  // trim
-  $transilation = trim($transilation, '-');
-
-  // lowercase
-  $slug = strtolower($transilation);
+  // trim dividers
+  $slug = trim($slug, '-');
 
   // escape duplicate slug
   $counter = 1;
@@ -280,6 +280,22 @@ function renameIfFileAlreadyExists($filename, $path)
   }
 
   return $filename;
+}
+
+/**
+ * Convert next lines to <br>
+ */
+function customNl2br($string)
+{
+  return preg_replace("/\r\n|\r|\n/", '<br/>', $string);
+}
+
+/**
+ * Convert <br> tags into \r\n
+ */
+function customBr2nl($string)
+{
+  return preg_replace('/<br\s?\/?>/i', "\r\n", $string);
 }
 
 /**
