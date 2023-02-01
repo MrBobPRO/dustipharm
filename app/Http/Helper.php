@@ -6,7 +6,14 @@
  * @author Bobur Nuridinov <bobnuridinov@gmail.com>
  */
 
+use App\Models\Advantage;
+use App\Models\Drugstore;
+use App\Models\Mission;
+use App\Models\Partner;
+use App\Models\Service;
+use App\Models\Value;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Route;
 
 /**
  * Transliterate string from any other language into latin
@@ -275,7 +282,42 @@ function renameIfFileAlreadyExists($filename, $path)
   return $filename;
 }
 
-function getPreviousRouteName()
+/**
+ * Returns Models tag of the current route
+ * Shared with all dashboard views by AppServiceProvider
+ *
+ * used only in dashboard
+ *
+ * @return string
+ */
+function getModelTag()
 {
-  return app('router')->getRoutes()->match(app('request')->create(url()->previous()))->getName();
+  $route = Route::currentRouteName();
+  $modelTag = 'undefined';
+
+  if (strpos($route, 'advantages') !== false) {
+    return Advantage::$tag;
+  }
+
+  if (strpos($route, 'drugstores') !== false) {
+    return Drugstore::$tag;
+  }
+
+  if (strpos($route, 'missions') !== false) {
+    return Mission::$tag;
+  }
+
+  if (strpos($route, 'partners') !== false) {
+    return Partner::$tag;
+  }
+
+  if (strpos($route, 'services') !== false) {
+    return Service::$tag;
+  }
+
+  if (strpos($route, 'values') !== false) {
+    return Value::$tag;
+  }
+
+  return $modelTag;
 }

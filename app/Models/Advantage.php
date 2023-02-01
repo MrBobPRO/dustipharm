@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Advantage extends Model
 {
   public $timestamps = false;
+  public static $tag = 'advantages';
   protected $fillable = ['title', 'body'];
 
   use HasFactory;

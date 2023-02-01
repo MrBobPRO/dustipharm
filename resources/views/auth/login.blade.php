@@ -48,7 +48,7 @@
 
     .form-header {
       padding: 14px 28px;
-      background-color: #1e2a78;
+      background-color: #1BA1A0;
       font-size: 14px;
       font-weight: 400;
       color: white;
@@ -103,10 +103,10 @@
       font-family: "Roboto", sans-serif;
       font-size: 12px;
       line-height: 0;
-      color: #1e2a78;
+      color: white;
       text-transform: uppercase;
       cursor: pointer;
-      background-color: #ffd615;
+      background-color: #FF803A;
       border: none;
       border-radius: 6px;
       transition: 0.3s;
@@ -114,7 +114,7 @@
     }
 
     .submit:hover {
-      box-shadow: 0 0 12px #ffd615;
+      box-shadow: 0 0 12px #FF803A;
     }
 
     .home-link {
