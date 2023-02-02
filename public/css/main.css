@@ -868,6 +868,9 @@ picture {
   padding: 40px 32px;
   border-radius: 16px;
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .partners-card:hover {
@@ -885,6 +888,10 @@ picture {
 
 .partners-card__body {
   margin-bottom: 32px;
+}
+
+.partners-card__link {
+  margin-top: auto;
 }
 
 /* ------------ /end Partners ------------ */

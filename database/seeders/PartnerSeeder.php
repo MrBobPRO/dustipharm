@@ -54,7 +54,7 @@ class PartnerSeeder extends Seeder
 
       [
         'title' => 'Apharma',
-        'body' => 'Экспортёр лекарственных препаратов.г',
+        'body' => 'Экспортёр лекарственных препаратов',
         'link' => 'https://evolet.tj'
       ],
     ];

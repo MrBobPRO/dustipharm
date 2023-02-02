@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('body');
-            $table->string('image')->nullable();
             $table->string('link');
+            $table->string('image')->nullable();
         });
     }
 

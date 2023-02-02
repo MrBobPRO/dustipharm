@@ -21,11 +21,11 @@
           </th>
 
           <th>
-            Телефон
+            Ссылка
           </th>
 
           <th>
-            Эл. почта
+            Текст
           </th>
 
           <th width="140">
@@ -41,9 +41,9 @@
           {{-- Checkbox for multidestroy --}}
           @include('dashboard.components.table.checkbox')
 
-          <td>{{ $item->title }}</td>
-          <td>{{ $item->phone }}</td>
-          <td>{{ $item->email }}</td>
+          <td>{{  $item->title  }}</td>
+          <td>{{ $item->link }}</td>
+          <td>{{ $item->body }}</td>
 
           {{-- Actions --}}
           <td>

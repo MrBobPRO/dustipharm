@@ -51,7 +51,7 @@
     <label class="form-label">Изображение</label>
 
     <input class="form-input" type="file" name="image" accept=".png, .jpg, .jpeg" data-action="display-local-image" data-target="local-image">
-    <img class="form-image form-image--dark-bg" data-id="local-image" src="{{ asset('img/drugstores/' . $item->image) }}">
+    <img class="form-image" data-id="local-image" src="{{ asset('img/drugstores/' . $item->image) }}">
   </div>
 
   <div class="form-actions">
