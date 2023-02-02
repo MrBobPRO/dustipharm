@@ -222,6 +222,7 @@ picture {
 }
 
 .secondary-card__image {
+  width: 100%;
   border-radius: 16px;
 }
 
@@ -920,11 +921,15 @@ picture {
   flex-wrap: wrap;
 }
 
-.drugstores-list .secondary-card__title {
+.drugstores-card {
+  width: calc(50% - 12px);
+}
+
+.drugstores-card .secondary-card__title {
   margin-top: 0;
 }
 
-.drugstores-list .secondary-card__desc {
+.drugstores-card .secondary-card__desc {
   margin-top: 0;
 }
 

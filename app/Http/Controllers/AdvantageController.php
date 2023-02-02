@@ -12,8 +12,6 @@ class AdvantageController extends Controller
 
   /**
    * Display a listing of the resource.
-   *
-   * @return \Illuminate\Http\Response
    */
   public function dashboardIndex(Request $request)
   {
@@ -37,8 +35,6 @@ class AdvantageController extends Controller
 
   /**
    * Show the form for creating a new resource.
-   *
-   * @return \Illuminate\Http\Response
    */
   public function create()
   {
@@ -47,9 +43,6 @@ class AdvantageController extends Controller
 
   /**
    * Store a newly created resource in storage.
-   *
-   * @param  \Illuminate\Http\Request  $request
-   * @return \Illuminate\Http\Response
    */
   public function store(Request $request)
   {
@@ -68,9 +61,6 @@ class AdvantageController extends Controller
 
   /**
    * Show the form for editing the specified resource.
-   *
-   * @param  \App\Models\Advantage  $advantage
-   * @return \Illuminate\Http\Response
    */
   public function edit(Request $request)
   {
@@ -81,10 +71,6 @@ class AdvantageController extends Controller
 
   /**
    * Update the specified resource in storage.
-   *
-   * @param  \Illuminate\Http\Request  $request
-   * @param  \App\Models\Advantage  $advantage
-   * @return \Illuminate\Http\Response
    */
   public function update(Request $request)
   {
@@ -102,13 +88,21 @@ class AdvantageController extends Controller
   }
 
   /**
-   * Remove the specified resource from storage.
+   * Request for deleting items by id may come in integer type (destroy single item form)
+   * or in array type (destroy multiple items form)
+   * That`s why we need to get id in array type and delete them by loop
    *
-   * @param  \App\Models\Advantage  $advantage
-   * @return \Illuminate\Http\Response
+   * Checkout Model Boot methods deleting function
+   * Models relations also deleted on deleting function of Models Boot method
    */
-  public function destroy(Advantage $advantage)
+  public function destroy(Request $request)
   {
-    //
+    $ids = (array) $request->id;
+
+    foreach ($ids as $id) {
+      Advantage::find($id)->delete();
+    }
+
+    return redirect()->route('advantages.dashboard.index');
   }
 }
