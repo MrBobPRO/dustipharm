@@ -27,5 +27,5 @@ yarn-error.log
 !/public/img/partners/banner.png
 
 /public/img/services/*
-!/public/img/partners/banner.png
-!/public/img/partners/registration.png
+!/public/img/services/banner.png
+!/public/img/services/registration.png
