@@ -8,6 +8,8 @@
 
   <title>Админка — {{ env('APP_NAME') }}</title>
 
+  <link rel="icon" type="image/png" href="/favicon.ico">
+
   {{-- Noindex --}}
   <meta name="robots" content="none" />
   <meta name="googlebot" content="noindex, nofollow" />
