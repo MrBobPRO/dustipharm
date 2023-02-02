@@ -21,11 +21,11 @@ yarn-error.log
 /public/img/advantages/*
 
 /public/img/drugstores/*
-!/public/img/drugstores/banner.png/*
+!/public/img/drugstores/banner.png
 
 /public/img/partners/*
-!/public/img/partners/banner.png/*
+!/public/img/partners/banner.png
 
 /public/img/services/*
-!/public/img/partners/banner.png/*
-!/public/img/partners/registration.png/*
+!/public/img/partners/banner.png
+!/public/img/partners/registration.png
