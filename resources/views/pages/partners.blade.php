@@ -1,5 +1,7 @@
 @extends('layouts.app', ['pageClass' => 'partners-page'])
 
+@section('title', 'Партнеры')
+
 @section('main')
 
 <section class="page-base">

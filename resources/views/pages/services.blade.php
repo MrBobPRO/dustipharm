@@ -1,5 +1,7 @@
 @extends('layouts.app', ['pageClass' => 'services-page'])
 
+@section('title', 'Услуги')
+
 @section('main')
 
 <section class="page-base">

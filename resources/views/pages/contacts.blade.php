@@ -1,5 +1,7 @@
 @extends('layouts.app', ['pageClass' => 'contacts-page'])
 
+@section('title', 'Контакты')
+
 @section('main')
 
 <section class="page-base">

@@ -1,5 +1,7 @@
 @extends('layouts.app', ['pageClass' => 'about-page'])
 
+@section('title', 'О компании')
+
 @section('main')
 
 <section class="page-base">

@@ -23,7 +23,23 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#1BA1A0">
 
-  <title>Дусти Фарма</title>
+  <title>@hasSection('title')@yield('title'){{ ' — Дусти Фарма' }}@else{{ 'Дусти Фарма' }}@endif</title>
+
+  <meta property="og:site_name" content="Дусти Фарма">
+  <meta property="og:type" content="object">
+  <meta name="twitter:card" content="summary_large_image">
+
+  @hasSection ('meta-tags')
+    @yield('meta-tags')
+  @else
+  <meta name="description"
+    content="Дусти Фарма занимается дистрибьюцией импортных лекарственных средств, последовательно расширяя свою сеть оптовых и розничных аптек, а также распространяя лекарственные препараты через другие аптеки страны.">
+  <meta property="og:title" content="Дусти Фарма">
+  <meta property="og:description"
+    content="Дусти Фарма занимается дистрибьюцией импортных лекарственных средств, последовательно расширяя свою сеть оптовых и розничных аптек, а также распространяя лекарственные препараты через другие аптеки страны.">
+  <meta property="og:image" content="{{ asset('img/main/logo-share.png') }}">
+  <meta property="og:image:alt" content="Дусти Фарма logo">
+  @endif
 
   {{-- Source sans pro Font --}}
   <link rel="preconnect" href="https://fonts.googleapis.com">

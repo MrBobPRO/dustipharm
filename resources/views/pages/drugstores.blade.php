@@ -1,5 +1,7 @@
 @extends('layouts.app', ['pageClass' => 'drugstores-page'])
 
+@section('title', 'Сеть аптек')
+
 @section('main')
 
 <section class="page-base">

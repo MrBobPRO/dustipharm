@@ -1,5 +1,7 @@
 @extends('layouts.app', ['pageClass' => 'express-page'])
 
+@section('title', 'Express Pharm')
+
 @section('main')
 
 <section class="page-base">
