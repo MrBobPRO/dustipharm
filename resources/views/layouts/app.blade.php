@@ -25,6 +25,11 @@
 
   <title>@hasSection('title')@yield('title'){{ ' — Дусти Фарма' }}@else{{ 'Дусти Фарма' }}@endif</title>
 
+  {{-- Noindex --}}
+  <meta name="robots" content="none" />
+  <meta name="googlebot" content="noindex, nofollow" />
+  <meta name="yandex" content="none">
+
   <meta property="og:site_name" content="Дусти Фарма">
   <meta property="og:type" content="object">
   <meta name="twitter:card" content="summary_large_image">
