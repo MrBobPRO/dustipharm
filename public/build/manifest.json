@@ -1,12 +1,12 @@
 {
-  "public/css/main.css": {
-    "file": "assets/main-d8acf505.css",
-    "src": "public/css/main.css",
-    "isEntry": true
-  },
   "public/css/media.css": {
     "file": "assets/media-c544021f.css",
     "src": "public/css/media.css",
+    "isEntry": true
+  },
+  "public/css/main.css": {
+    "file": "assets/main-7460600a.css",
+    "src": "public/css/main.css",
     "isEntry": true
   },
   "public/js/main.js": {
