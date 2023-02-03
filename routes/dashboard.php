@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdvantageController;
 use App\Http\Controllers\DrugstoreController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\MissionController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ServiceController;
@@ -75,6 +76,10 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
 
     Route::post('/store', 'store')->name('store');
     Route::post('/update', 'update')->name('update');
+    Route::post('/destroy', 'destroy')->name('destroy');
+  });
+
+  Route::controller(GalleryController::class)->prefix('/gallery')->name('gallery.')->group(function () {
     Route::post('/destroy', 'destroy')->name('destroy');
   });
 });

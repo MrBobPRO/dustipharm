@@ -20,11 +20,10 @@ yarn-error.log
 .htaccess
 /public/img/advantages/*
 
-/public/img/drugstores/*
-!/public/img/drugstores/banner.png
-
 /public/img/partners/*
 !/public/img/partners/banner.png
+
+/public/img/gallery/*
 
 /public/img/services/*
 !/public/img/services/banner.png

@@ -89,3 +89,32 @@ document.querySelectorAll('[data-action="toggle-menu"]').forEach((item) => {
     mobileMenu.classList.toggle('mobile-menu--visible');
   });
 });
+
+
+// Drugstores carousel
+let drugstoreCarousels = [];
+
+document.querySelectorAll('.drugstores-carousel').forEach((item) => {
+  drugstoreCarousels[item.dataset.carouselIndex] = $('.drugstores-carousel' + item.dataset.carouselIndex).owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: false,
+    items: 1,
+    dots: false,
+    singleItem: true,
+    transitionStyle: "fade"
+  });
+
+  // carousels current slide counter
+  drugstoreCarousels[item.dataset.carouselIndex].on('changed.owl.carousel', function (event) {
+    const counter = item.parentElement.querySelector('.carousel-counter__current');
+    counter.innerHTML = event.relatedTarget.relative(event.item.index) + 1;
+  });
+
+  // carousel navs
+  item.parentElement.querySelector('.carousel-navs__item--prev')
+    .addEventListener('click', () => drugstoreCarousels[item.dataset.carouselIndex].trigger('prev.owl.carousel'));
+
+  item.parentElement.querySelector('.carousel-navs__item--next')
+    .addEventListener('click', () => drugstoreCarousels[item.dataset.carouselIndex].trigger('next.owl.carousel'));
+});

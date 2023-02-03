@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Drugstore;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 
 class DrugstoreController extends Controller
@@ -49,12 +50,12 @@ class DrugstoreController extends Controller
     $fields = ['title', 'phone', 'email', 'working_days', 'working_hours', 'x_coordinates', 'y_coordinates'];
     fillModelColumns($item, $fields, $request);
 
-    // upload files
-    uploadModelsFile($request, $item, 'image', transliterateIntoLatin($item->title), self::IMAGE_PATH, 484, 360);
-
     $item->save();
 
-    return redirect()->route('drugstores.dashboard.index');
+    // upload gallery images
+    Gallery::storeDrugstoreImages($request->images, $item->id);
+
+    return redirect()->route('drugstores.dashboard.edit', $item->id);
   }
 
   /**
@@ -77,9 +78,10 @@ class DrugstoreController extends Controller
     fillModelColumns($item, $fields, $request);
     $item->save();
 
-    // upload files
-    uploadModelsFile($request, $item, 'image', transliterateIntoLatin($item->title), self::IMAGE_PATH, 484, 360);
-    $item->save();
+    // upload gallery images
+    if($request->images) {
+      Gallery::storeDrugstoreImages($request->images, $item->id);
+    }
 
     return redirect()->route('drugstores.dashboard.index');
   }

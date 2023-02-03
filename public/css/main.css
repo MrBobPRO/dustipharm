@@ -515,6 +515,58 @@ picture {
 /* ------------ /end Read more ------------ */
 
 
+/* ------------ Carousel navs ------------ */
+.carousel-navs {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px
+}
+
+.carousel-navs__item {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+.carousel-navs__item--prev {
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.carousel-navs__item--next {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.carousel-navs__icon {
+  width: auto !important;
+  height: auto !important;
+  pointer-events: none;
+}
+
+.carousel-counter {
+  margin-left: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.carousel-counter__seperator {
+  width: 60px;
+  height: 2px;
+  background-color: var(--main-color);
+  transition: 0.3s;
+}
+
+/* ------------ /end Carousel navs ------------ */
+
+
 /* ------------ Home ------------ */
 /* Banner */
 .banner {
@@ -663,6 +715,24 @@ picture {
   height: 480px;
 }
 
+.drugstores-card:hover .carousel-navs {
+  color: white;
+}
+
+.drugstores-card:hover .carousel-navs__item--prev {
+  border-color: white;
+  color: white;
+}
+
+.drugstores-card:hover .carousel-navs__item--next {
+  border-color: white;
+  background-color: white;
+  color: var(--main-color);
+}
+
+.drugstores-card:hover .carousel-counter__seperator {
+  background-color: white;
+}
 /* ------------ /end Home ------------ */
 
 

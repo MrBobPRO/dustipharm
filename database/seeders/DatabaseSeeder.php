@@ -28,7 +28,8 @@ class DatabaseSeeder extends Seeder
       MissionSeeder::class,
       PartnerSeeder::class,
       ServiceSeeder::class,
-      ValueSeeder::class
+      ValueSeeder::class,
+      GallerySeeder::class
     ]);
   }
 }

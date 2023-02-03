@@ -48,10 +48,9 @@
   </div>
 
   <div class="form-group">
-    <label class="form-label">Изображение</label>
+    <label class="form-label">Добавить изображения (множественный выбор). Необходимый размер изображений 484x360 пикселей</label>
 
-    <input class="form-input" type="file" name="image" accept=".png, .jpg, .jpeg" data-action="display-local-image" data-target="local-image">
-    <img class="form-image" data-id="local-image" src="{{ asset('img/drugstores/' . $item->image) }}">
+    <input class="form-input" type="file" name="images[]" accept=".png, .jpg, .jpeg" multiple>
   </div>
 
   <div class="form-actions">
@@ -60,6 +59,27 @@
   </div>
 
 </form>
+
+<div class="gallery" id="gallery-block">
+  <h3 class="gallery-title">Галерея</h3>
+  @unless ($item->gallery()->count())
+    <p>Изображения отсутствуют!</p>
+  @endunless
+
+  <div class="gallery-list">
+    @foreach ($item->gallery as $image)
+    <form class="gallery-list__item" action="{{ route('gallery.destroy') }}" method="POST">
+      @csrf
+
+      <input type="hidden" name="id" value="{{ $image->id }}">
+      <img class="gallery-list__image" src="{{ asset('img/gallery/' . $image->filename) }}">
+      <button class="gallery-list__button">
+        <span class="material-icons-outlined">close</span>
+      </button>
+    </form>
+    @endforeach
+  </div>
+</div>
 
 @include('dashboard.modals.destroy-single-item', ['itemId' => $item->id ])
 

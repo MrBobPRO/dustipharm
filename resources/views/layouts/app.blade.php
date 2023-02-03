@@ -35,7 +35,7 @@
   <meta name="twitter:card" content="summary_large_image">
 
   @hasSection ('meta-tags')
-    @yield('meta-tags')
+  @yield('meta-tags')
   @else
   <meta name="description"
     content="Дусти Фарма занимается дистрибьюцией импортных лекарственных средств, последовательно расширяя свою сеть оптовых и розничных аптек, а также распространяя лекарственные препараты через другие аптеки страны.">
@@ -57,7 +57,12 @@
   {{-- Normalize CSS --}}
   <link rel="stylesheet" href="{{ asset('plugins/normalize.css') }}">
 
-  {{-- <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  {{-- Owl Carousel 2.3.4 --}}
+  <link rel="stylesheet" href="{{ asset('plugins/owl-carousel/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('plugins/owl-carousel/owl.theme.default.min.css') }}">
+
+  {{--
+  <link rel="stylesheet" href="{{ asset('css/main.css') }}">
   <link rel="stylesheet" href="{{ asset('css/media.css') }}"> --}}
 
   {{-- App bundled stlyes --}}
@@ -74,6 +79,9 @@
 
   {{-- JQuery --}}
   <script src="{{ asset('plugins/jquery-3.6.0.min.js') }}"></script>
+
+  {{-- Owl Carousel 2.3.4 --}}
+  <script src="{{ asset('plugins/owl-carousel/owl.carousel.min.js') }}"></script>
 
   {{-- Yandex Map --}}
   <script script src="https://api-maps.yandex.ru/2.1/?apikey=33a7de30-2310-4469-8b08-d11b5c952eca&lang=ru_RU"></script>

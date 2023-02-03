@@ -38,7 +38,29 @@
           <br>Тел: {{ $drugstore->phone }}
           <br>Email: {{ $drugstore->email }}
         </p>
-        <img class="secondary-card__image" src="{{ asset('img/drugstores/' . $drugstore->image) }}" alt="{{ $drugstore->title }}">
+
+        <div class="drugstores-carousel-container">
+          <div class="drugstores-carousel drugstores-carousel{{ $loop->index + 1 }} owl-carousel" data-carousel-index={{ $loop->index + 1 }}>
+            @foreach ($drugstore->gallery as $image)
+            <img class="secondary-card__image" src="{{ asset('img/gallery/' . $image->filename) }}" alt="{{ $drugstore->title }}">
+            @endforeach
+          </div>
+
+          <div class="drugstores-carousel-navs carousel-navs">
+            <button class="carousel-navs__item carousel-navs__item--prev">
+              <span class="material-icons">chevron_left</span>
+            </button>
+            <button class="carousel-navs__item carousel-navs__item--next">
+              <span class="material-icons">chevron_right</span>
+            </button>
+
+            <div class="carousel-counter drugstores-counter">
+              <div class="carousel-counter__current">1</div>
+              <div class="carousel-counter__seperator"></div>
+              <div class="carousel-counter__last">{{ $drugstore->gallery->count() }}</div>
+            </div>
+          </div>
+        </div>
       </div>
       @endforeach
     </div>
@@ -53,7 +75,9 @@
     </p>
   </div>
 
-  <script> let drugstores = {{ Js::from($drugstoresArray) }}; </script>
+  <script>
+    let drugstores = {{ Js::from($drugstoresArray) }};
+  </script>
   <div class="drugstores-map" id="drugstores-map"></div>
 </section>
 @endsection

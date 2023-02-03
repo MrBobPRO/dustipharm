@@ -47,10 +47,9 @@
   </div>
 
   <div class="form-group">
-    <label class="form-label required">Изображение. Необходимый размер 484x360 пикселей</label>
+    <label class="form-label required">Изображения (множественный выбор). Необходимый размер изображений 484x360 пикселей</label>
 
-    <input class="form-input" type="file" name="image" accept=".png, .jpg, .jpeg" data-action="display-local-image" data-target="local-image" required>
-    <img class="form-image" data-id="local-image" src="{{ asset('img/dashboard/default-image.png') }}">
+    <input class="form-input" type="file" name="images[]" accept=".png, .jpg, .jpeg" multiple required>
   </div>
 
   <div class="form-actions">

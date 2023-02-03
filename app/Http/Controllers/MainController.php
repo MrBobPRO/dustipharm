@@ -45,7 +45,8 @@ class MainController extends Controller
 
   public function drugstores()
   {
-    $drugstores = Drugstore::all();
+    $drugstores = Drugstore::with('gallery')->get();
+ 
     $drugstoresArray = Drugstore::all()->toArray();
 
     return view('pages.drugstores', compact('drugstores', 'drugstoresArray'));
