@@ -38,7 +38,7 @@ class MainController extends Controller
 
   public function partners()
   {
-    $partners = Partner::all();
+    $partners = Partner::orderBy('title')->get();
 
     return view('pages.partners', compact('partners'));
   }
@@ -46,7 +46,7 @@ class MainController extends Controller
   public function drugstores()
   {
     $drugstores = Drugstore::with('gallery')->get();
- 
+
     $drugstoresArray = Drugstore::all()->toArray();
 
     return view('pages.drugstores', compact('drugstores', 'drugstoresArray'));
