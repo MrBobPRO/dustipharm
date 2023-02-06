@@ -6,27 +6,27 @@
         <h4 class="footer__title">Полезные ссылки</h4>
         <ul class="footer__links-list">
           <li>
-            <a class="footer__links-item" href="#">Evolet Tajikistan</a>
+            <a class="footer__links-item" href="https://evolet.tj/" target="_blank">Evolet Tajikistan</a>
           </li>
 
           <li>
-            <a class="footer__links-item" href="#">Vegapharm Tajikistan</a>
+            <a class="footer__links-item" href="https://vegapharm.tj/" target="_blank">Vegapharm Tajikistan</a>
           </li>
 
           <li>
-            <a class="footer__links-item" href="#">Spey Tajikistan</a>
+            <a class="footer__links-item" href="https://spey.tj/" target="_blank">Spey Tajikistan</a>
           </li>
 
           <li>
-            <a class="footer__links-item" href="#">Neo Universe</a>
+            <a class="footer__links-item" href="https://neouniverse.tj/" target="_blank">Neo Universe</a>
           </li>
 
           <li>
-            <a class="footer__links-item" href="#">Asia Pharma</a>
+            <a class="footer__links-item" href="https://asiapharm.tj/" target="_blank">Asia Pharma</a>
           </li>
 
           <li>
-            <a class="footer__links-item" href="#">Madad Pharma</a>
+            <a class="footer__links-item" href="https://madadpharm.tj/" target="_blank">Madad Pharma</a>
           </li>
         </ul>
       </div>
