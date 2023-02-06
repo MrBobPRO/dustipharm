@@ -963,9 +963,15 @@ picture {
   box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.08), 0px 20px 32px rgba(96, 97, 112, 0.24), 0px 2px 8px rgba(40, 41, 61, 0.08), 0px 20px 32px rgba(96, 97, 112, 0.24);
 }
 
-.partners-card__image {
+.partners-card__image-container {
+  padding: 20px;
   border: 2px solid #F5F5F5;
   border-radius: 16px;
+  width: 90%;
+}
+
+.partners-card__image {
+  width: 100%;
 }
 
 .partners-card__title {

@@ -81,7 +81,7 @@
   </div>
 
   <div class="footer__bottom">
-    <p class="footer__copyright">© 2022 ООО “Дусти Фарма”. <br>Все права защищены.</p>
+    <p class="footer__copyright">© {{ date('Y') }} ООО “Дусти Фарма”. <br>Все права защищены.</p>
     <button class="scroll-top"><span class="material-icons">expand_less</span></button>
   </div>
 </footer>

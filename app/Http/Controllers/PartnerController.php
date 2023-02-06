@@ -50,7 +50,7 @@ class PartnerController extends Controller
     fillModelColumns($item, $fields, $request);
 
     // upload files
-    uploadModelsFile($request, $item, 'image', transliterateIntoLatin($item->title), self::IMAGE_PATH, 270, 135);
+    uploadModelsFile($request, $item, 'image', transliterateIntoLatin($item->title), self::IMAGE_PATH, 222, 84);
 
     $item->save();
 
@@ -78,7 +78,7 @@ class PartnerController extends Controller
     $item->save();
 
     // upload files
-    uploadModelsFile($request, $item, 'image', transliterateIntoLatin($item->title), self::IMAGE_PATH, 270, 135);
+    uploadModelsFile($request, $item, 'image', transliterateIntoLatin($item->title), self::IMAGE_PATH, 222, 84);
     $item->save();
 
     return redirect()->route('partners.dashboard.index');

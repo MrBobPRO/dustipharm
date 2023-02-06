@@ -31,7 +31,9 @@
     <div class="partners-list">
       @foreach ($partners as $partner)
       <div class="partners-card">
-        <img class="partners-card__image" src="{{ asset('img/partners/' . $partner->image) }}" alt="{{ $partner->title }}">
+        <div class="partners-card__image-container">
+          <img class="partners-card__image" src="{{ asset('img/partners/' . $partner->image) }}" alt="{{ $partner->title }}">
+        </div>
 
         <h3 class="partners-card__title">{!! $partner->title !!}</h3>
         <p class="partners-card__body">{{ $partner->body }}</p>
